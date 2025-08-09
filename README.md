@@ -11,7 +11,7 @@ def get_title(url):
         resp = requests.get(url, timeout=10)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
-        title = soup.title.string.strip() if soup.title and soup.title.string else "No title found"
+        title = soup.title.string.strip() if soup.title and soup.title.string else "No titl found"
         return unescape(title)
     except Exception as e:
         return f"ERROR: {e}"
