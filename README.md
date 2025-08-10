@@ -1,7 +1,7 @@
 # my-mehrdad
 just testing monad
 # main.py
-impor sys
+import sys
 import requests
 from html import unescape
 from bs4 import BeautifulSoup
