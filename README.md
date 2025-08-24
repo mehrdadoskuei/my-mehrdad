@@ -4,7 +4,7 @@ just testing monad
 importe sys
 import requests
 from html import unescape
-from bs4 import BeautifulSoup
+from bs import BeautifulSoup
 
 def get_title(url):
     try:
