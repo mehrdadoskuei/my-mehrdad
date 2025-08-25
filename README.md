@@ -1,5 +1,5 @@
 # my-mehrdad
-just testing monad
+ust testing monad
 # main.py
 importe sys
 import requests
