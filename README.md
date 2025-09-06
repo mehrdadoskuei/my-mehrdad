@@ -21,4 +21,4 @@ if __name__ == "__main__":
         print("Usage: python main.py <url>")
         sys.exit(1)
     url = sys.argv[1]
-    print(get_title(url))
+    print(get_title(url)
