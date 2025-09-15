@@ -1,4 +1,4 @@
-# m-mehrdad&mehrdad
+# m-mehrdad
 just testing monad
 # main.py
 importe sys
