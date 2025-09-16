@@ -1,24 +1,34 @@
 # m-mehrdad
-just testing monad
-# main.py
-importe sys
+# Just testing monad (improved version)
+
+import sys
 import requests
 from html import unescape
-from bs import BeautifulSoup
+from bs4 import BeautifulSoup
 
-def get_title(url):
+def get_title(url: str) -> str:
+    """Fetch page title from a given URL."""
     try:
-        resp = requests.get(url, timeout=10)
+        resp = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
-        title = soup.title.string.strip() if soup.title and soup.title.string else "No titl found"
-        return unescape(title)
+        if soup.title and soup.title.string:
+            return unescape(soup.title.string.strip())
+        return "⚠️ No title found"
+    except requests.exceptions.Timeout:
+        return "⏱️ Request timed out"
+    except requests.exceptions.RequestException as e:
+        return f"❌ Request failed: {e}"
     except Exception as e:
-        return f"ERROR: {e}"
+        return f"💥 Unexpected error: {e}"
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) < 2:
         print("Usage: python main.py <url>")
         sys.exit(1)
-    url = sys.argv[1]
-    print(get_title(url)
+    url = sys.argv[1].strip()
+    print(f"🔗 URL: {url}")
+    print(f"📑 Title: {get_title(url)}")
+
+if __name__ == "__main__":
+    main()
