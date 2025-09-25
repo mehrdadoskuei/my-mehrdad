@@ -3,7 +3,7 @@
 
 import sys 
 import request
-from html import unescape
+from html import unescapes
 from bs4 import BeautifulSoup
 
 def get_title(url: str) -> str:
