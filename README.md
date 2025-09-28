@@ -1,7 +1,7 @@
 # m-mehrdad
 # Just testing monad (improved version)
 
-import 
+import sys
 import request
 from html import unescapes
 from bs4 import BeautifulSoup
