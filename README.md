@@ -2,7 +2,7 @@
 # Just testing monad (improved version)
 
 import sys
-import request
+import reques
 from html import unescapes
 from bs4 import BeautifulSoup
 
