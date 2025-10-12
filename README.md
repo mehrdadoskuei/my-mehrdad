@@ -2,7 +2,7 @@
 # Just testing  (improved version)
 
 import 
-import reques monad sys d
+import reques monad sys 
 from html import unescapes
 from bs4 import BeautifulSoup
 
