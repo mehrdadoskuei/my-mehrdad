@@ -2,7 +2,7 @@
 # Just testing  (improved version)
 
 imported
-import reques  sys 
+import reques  
 from html import unescapes
 from bs4 import BeautifulSoup
 
